@@ -5,7 +5,7 @@ set nocompatible
 filetype plugin indent on
 
 " various customizations
-set directory=~/.vim/tmp " directory to place swap files in TODO: do a tiny bit more research on this
+set directory=~/.vim/tmp " directory to place swap files in
 set smarttab " intelligently edit tabs
 set expandtab " expand tabs into spaces
 set wrap
@@ -15,7 +15,7 @@ set colorcolumn=80,81
 
 set cursorline
 
-" TODO: Add :set spell/nospell
+" TODO: Add :set spell/nospell mappings
 " TODO: remap a to ea, to append to the end of words
 
 
@@ -102,8 +102,8 @@ call pathogen#helptags() " TODO: What does this call do?
 syntax on
 
 
-" Gundo
-nnoremap <leader>g :GundoToggle<CR>
+" Gundo - currently disabled, GUNDO seems broken on my comp
+" nnoremap <leader>g :GundoToggle<CR>
 
 " Solarized
 "syntax enable " Is this redundant with syntax on?
@@ -134,7 +134,7 @@ set history=100 " keep 50 lines of command line history
 set ruler       " show the cursor position all the time
 set showcmd     " display incomplete commands
 set incsearch   " do incremental searching
-set hlsearch  " highlight search results
+set hlsearch    " highlight search results
 set ic          " ignore case in search
 set smartcase   " case sensitive except when query includes upcase char
 :nmap <leader>h :nohlsearch<CR> " clear search highlights with ,q
@@ -224,11 +224,13 @@ cmap cd. lcd %:p:h
 
 
 " Unmap brackets so tab switching is quick
-autocmd Filetype vim,python unmap <buffer> [[
-autocmd Filetype vim unmap <buffer> []
-autocmd Filetype vim,python unmap <buffer> ]]
-autocmd Filetype vim unmap <buffer> ][
+autocmd Filetype vim,python,ruby unmap <buffer> [[
+autocmd Filetype vim,ruby unmap <buffer> []
+autocmd Filetype vim,python,ruby unmap <buffer> ]]
+autocmd Filetype vim,ruby unmap <buffer> ][
 autocmd Filetype vim unmap <buffer> ["
 autocmd Filetype vim unmap <buffer> ]"
-autocmd Filetype python unmap <buffer> [m
-autocmd Filetype python unmap <buffer> ]m
+autocmd Filetype python,ruby unmap <buffer> [m
+autocmd Filetype python,ruby unmap <buffer> ]m
+autocmd Filetype ruby unmap <buffer> [M
+autocmd Filetype ruby unmap <buffer> ]M
