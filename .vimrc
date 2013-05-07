@@ -47,8 +47,8 @@ map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 
-" set paste
-map <leader>p :set paste!<cr>
+" set paste, go into insert mode
+map <leader>p :set paste!<cr>i
 
 
 " Scroll viewport 3 lines at a time
@@ -110,6 +110,10 @@ syntax on
 set background=dark
 colorscheme solarized
 
+
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['java'] }
 
 " Powerline
 set laststatus=2   " Always show the statusline
