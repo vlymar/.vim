@@ -1,7 +1,7 @@
 #!/bin/sh
 # Shamelessly stolen from jeady
-# git submodule init
-# git submodule update
+git submodule init
+git submodule update
 
 if [ -e ~/.vimrc ]
 then
