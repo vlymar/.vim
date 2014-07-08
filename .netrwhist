@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/evidenceofllama/WaitHate/Boss/app/controllers'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/victor/code/WaitHate-Boss/app/views'
+let g:netrw_dirhist_2='/Users/victor/code/WaitHate-Boss/app/assets'
+let g:netrw_dirhist_3='/Users/victor/code/WaitHate-Boss/config'
+let g:netrw_dirhist_4='/Users/victor/code/WaitHate-Boss/app/views'
+let g:netrw_dirhist_5='/Users/victor/code/avatar/public'
